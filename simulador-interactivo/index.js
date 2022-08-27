@@ -88,12 +88,12 @@ function descuento(totalCompra) {
 
             case "zambrita":
                 totalNuevoCompra = zambrita(totalCompra);
-                alert(`Su descuento fue de un %10, el precio antiguo era de: $ ${totalCompra}, su nuevo precio a pagar es de: $ ${totalNuevoCompra}`);
+                alert(`Su descuento fue de un 10%, el precio antiguo era de: $ ${totalCompra}, su nuevo precio a pagar es de: $ ${totalNuevoCompra}`);
                 return totalNuevoCompra;
 
             case "cyclopscito":
                 totalNuevoCompra = cyclopscito(totalCompra);
-                alert(`Su descuento fue de un %25, el precio antiguo era de: $ ${totalCompra}, su nuevo precio a pagar es de: $ ${totalNuevoCompra}`);
+                alert(`Su descuento fue de un 25%, el precio antiguo era de: $ ${totalCompra}, su nuevo precio a pagar es de: $ ${totalNuevoCompra}`);
                 return totalNuevoCompra;
 
             default:
