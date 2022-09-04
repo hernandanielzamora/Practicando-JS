@@ -6,9 +6,10 @@ El programa posee el siguiente algoritmo:
 2) Mostrar por pantalla un menú de selección de productos.
 3) Preguntar cuales productos (detallando siempre las opciones disponibles).
 4) Mostrar por pantalla el total y el detalle de dicha operación, es decir, cada vez que se añade un objeto al carrito(neto y por otro lado impuestos).
-5) Muestra por pantalla el total parcial, es decir, la suma de todos los totales obtenidos hasta el momento (despues de que se añade el objeto) .
-6) Preguntar si el cliente tiene o no un cupón de descuentos (tiene 2 cupones de descuento "zambrita", "cyclopscito").
-7) Calcular y mostrar el total.
+5) Crea un objeto a partir de los  productos seleccionados, y los añade a un array.
+6) Muestra por pantalla el total parcial, es decir, la suma de todos los totales obtenidos hasta el momento (despues de que se añade el objeto) .
+7) Preguntar si el cliente tiene o no un cupón de descuentos (tiene 2 cupones de descuento "zambrita", "cyclopscito").
+8) Calcular y mostrar el total.
 */
 
 
