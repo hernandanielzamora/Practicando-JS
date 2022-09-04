@@ -34,6 +34,8 @@ function seleccion() {
                 totalConIva = iva(totalSinIva);
                 calculoIva = resta(totalConIva, totalSinIva);
                 alert(`Usted eligió AK-47 | VENGANZA AQUAMARINA, su total por esta compra es $ ${totalConIva} (donde el precio base del arma es $ ${arma1} y el IVA es $ ${calculoIva})`);
+                let productUno = new Producto({nombre: "AK-47 | VENGANZA AQUAMARINA", precio: `${arma1}` })
+                arrayProductos.push(productUno)
                 totalCompra = totalCompra + totalConIva;
                 totalSinIva = 0;
                 totalConIva = 0;
@@ -46,6 +48,8 @@ function seleccion() {
                 totalConIva = iva(totalSinIva);
                 calculoIva = resta(totalConIva, totalSinIva);
                 alert(`Usted eligió AK-47 | PIZARRA, su total por esta compra es $ ${totalConIva} (donde el precio base del arma es $ ${arma2} y el IVA es $ ${calculoIva})`);
+                let productoDos = new Producto({nombre: "AK-47 | PIZARRA", precio: `${arma2}` })
+                arrayProductos.push(productoDos)
                 totalCompra = totalCompra + totalConIva;
                 totalSinIva = 0;
                 totalConIva = 0;
@@ -57,7 +61,9 @@ function seleccion() {
                 totalSinIva = suma(totalSinIva, arma3);
                 totalConIva = iva(totalSinIva);
                 calculoIva = resta(totalConIva, totalSinIva);
-                alert(`Usted eligió AWP   | WILDFIRE, su total por esta compra es $ ${totalConIva} (donde el precio base del arma es $ ${arma3} y el IVA es $ ${calculoIva})`);
+                alert(`Usted eligió AWP | WILDFIRE, su total por esta compra es $ ${totalConIva} (donde el precio base del arma es $ ${arma3} y el IVA es $ ${calculoIva})`);
+                let productoTres = new Producto({nombre: "AWP | WILDFIRE", precio: `${arma3}` })
+                arrayProductos.push(productoTres)
                 totalCompra = totalCompra + totalConIva;
                 totalSinIva = 0;
                 totalConIva = 0;
@@ -75,7 +81,6 @@ function seleccion() {
 
     return totalCompra;
 }
-
 
 /* Función de cálculo de descuento (si es que el cliente tiene el cupón) */
 
@@ -117,10 +122,17 @@ const iva = (precio) => { return precio * 1.21 };
 const zambrita = (precio) => { return resta(precio, (precio * 0.10)) };
 const cyclopscito = (precio) => { return resta(precio, (precio * 0.25)) };
 
+/* Creacion de class Productos */
+class Producto {
+    constructor(item){
+        this.nombre = item.nombre;
+        this.precio = item.precio;
+    }
+}
 
 
 /* Inicialización de variables globales */
-
+let arrayProductos = [];
 let arma1 = 3200;
 let arma2 = 1000;
 let arma3 = 10500;
@@ -135,14 +147,17 @@ let usuario = prompt("Ingrese su nombre por favor: ");
 /* Cálculo del primer total */
 let totalCompra = seleccion();
 alert(`El total de su compra por el momento es de = $ ${totalCompra}`);
+alert(`A continuación se mostrará uno por uno los objetos que ustéd añadió a su carrito (son ${arrayProductos.length} productos)`);
+for (let i = 0; i < arrayProductos.length; i++){
+    alert(`Producto número ${i + 1}\n Arma: ${arrayProductos[i].nombre} / Precio: ${arrayProductos[i].precio}`)
+}
 
 
 /* Validación del total != 0 */
-if (totalCompra != 0) {
+if (totalCompra > 0) {
     totalCompra = descuento(totalCompra);
     alert(`El monto final a pagar es de = $ ${totalCompra}`);
     alert(`Muchas gracias ${usuario} por confiar en nosotros, disfrute sus skins, nos vemos a la próxima!`);
-
 } else {
     alert(`${usuario}, usted no colocó productos en su carrito de compras. Para volver a intentarlo reinicie el programa.`);
 }
