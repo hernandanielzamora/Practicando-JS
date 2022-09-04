@@ -138,7 +138,7 @@ alert(`El total de su compra por el momento es de = $ ${totalCompra}`);
 
 
 /* Validación del total != 0 */
-if (totalCompra != 0) {
+if (totalCompra > 0) {
     totalCompra = descuento(totalCompra);
     alert(`El monto final a pagar es de = $ ${totalCompra}`);
     alert(`Muchas gracias ${usuario} por confiar en nosotros, disfrute sus skins, nos vemos a la próxima!`);
