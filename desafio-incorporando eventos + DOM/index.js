@@ -62,13 +62,11 @@ function seleccion() {
 
     while (cantidad != 0) {
         switch (cantidad) {
-            // Se pueden ahorrar muchas líneas de código con la función que te dejé al principio del código
             case 1:
                 totalCompra = agregarAlCarrito(arrayProductos[0])
                 break;
 
             case 2:
-                // Te quedarían así todos los cases
                 totalCompra = agregarAlCarrito(arrayProductos[1]);
                 break;
 
