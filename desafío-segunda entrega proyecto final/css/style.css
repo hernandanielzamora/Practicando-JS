@@ -1,0 +1,274 @@
+/* Normalize */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    font-family: "Chakra Petch", sans-serif;
+  }
+  
+  body {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(90deg, rgb(0, 0, 0) 0%, rgb(1, 13, 43) 79%);
+  }
+  
+  .logo {
+    width: 50px;
+  }
+  
+  /* Header */
+
+
+  nav {
+    background: rgb(4, 4, 4);
+    background: linear-gradient(80deg, rgb(4, 4, 4) 0%, rgb(16, 16, 18) 91%);
+  }
+  
+  .navbar-brand {
+    color: rgb(255, 255, 255);
+  }
+  .navbar-brand:hover {
+    color: rgb(255, 255, 255);
+  }
+  
+  .menu__link {
+    color: rgb(255, 255, 255);
+  }
+  .menu__link:hover {
+    color: #00ff9d;
+  }
+
+  
+  /* MAIN: index.html*/
+  
+  .main__minititle {
+    text-shadow: 1px 1px 20px #00fcf5;
+    color: #00f7ff;
+    margin: 5%;
+    text-align: center;
+  }
+
+  .btn-cart-body {
+    position: sticky;
+    bottom: 0px;
+  }
+
+  /* CART CARDS */
+  
+  .prices__div {
+    display: flex;
+    flex-direction: column;
+    align-content: center;
+  }
+
+  .cart__title {
+    text-shadow: 1px 1px 20px #00fcf5;
+    color: #00f7ff;
+    margin: 2%;
+  }
+  
+  /* FAQ */
+
+  .card-img-top {
+    height: auto;
+    width: 100%;
+    object-fit: contain;
+  }
+
+  /* Products */
+  .container-weapons {
+    width: 90vw;
+  }
+  .contenedor {
+    display: flex;
+    justify-content: space-evenly;
+    align-content: center;
+  }
+  
+  @media screen and (max-width: 480px) {
+    .contenedor {
+      justify-content: space-around;
+    }
+  }
+  
+  .card {
+    margin: 2%;
+    width: 18rem;
+  }
+  .card:hover {
+    transition: 0.5s ease-in-out;
+    background: transparent;
+    box-shadow: 0 0 1em #00f7ff;
+  }
+  @media screen and (max-width: 480px) {
+    .card {
+      width: 33%;
+    }
+  }
+  
+  .card-title {
+    text-align: center;
+  }
+  
+  .list-group-item, .card-title {
+    color: white;
+    font-size: larger;
+  }
+  @media screen and (max-width: 480px) {
+    .list-group-item, .card-title {
+      font-size: 10px;
+    }
+  }
+  @media only screen and (min-width: 469px) and (max-width: 960px) {
+    .list-group-item, .card-title {
+      font-size: 15px;
+    }
+  }
+  
+  .btn-guantes, .btn-subfusiles, .btn-agentes, .btn-cuchillos, .btn-pistolas, .btn-rifles, .btn-index, .btn-comprar {
+    margin: 5% 1.3%;
+    width: 180px;
+    height: 60px;
+    cursor: crosshair;
+    background: transparent;
+    border: 1px solid #a0dddb;
+    outline: none;
+    transition: 0.7s ease-in-out;
+  }
+
+  .btn-cart{
+    margin: 5% 1.3%;
+    width: 100px;
+    height: 60px;
+    cursor: crosshair;
+    background: transparent;
+    border: 1px solid #a0dddb;
+    outline: none;
+    transition: 0.7s ease-in-out;
+  }
+
+  .btn-cart-card {
+    margin: auto;
+    width: 50px;
+    height: 40px;
+    cursor: crosshair;
+    background: transparent;
+    border: 1px solid #a0dddb;
+    outline: none;
+    transition: 0.7s ease-in-out;
+  }
+
+  @media only screen and (min-width: 469px) and (max-width: 960px) {
+    .btn-guantes, .btn-subfusiles, .btn-agentes, .btn-cuchillos, .btn-pistolas, .btn-rifles, .btn-index {
+      margin: 4.3%;
+    }
+  }
+  @media only screen and (min-width: 961px) and (max-width: 1024px) {
+    .btn-guantes, .btn-subfusiles, .btn-agentes, .btn-cuchillos, .btn-pistolas, .btn-rifles, .btn-index {
+      margin: 6%;
+      width: 200px;
+    }
+  }
+  @media screen and (min-width: 1480px) and (max-width: 2560px) {
+    .btn-guantes, .btn-subfusiles, .btn-agentes, .btn-cuchillos, .btn-pistolas, .btn-rifles, .btn-index {
+      margin: 0.3%;
+      width: 400px;
+    }
+  }
+  
+  @media screen and (max-width: 480px) {
+    .div-botones {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      align-content: center;
+    }
+  }
+  
+  /* BOTONES */
+  .btn-cart:hover{
+    transition: 0.8s ease-in-out;
+    background: #0eddd3;
+    box-shadow: 0 0 1.5em #0eddd3;
+  }
+
+  .btn-index:hover {
+    transition: 0.8s ease-in-out;
+    background: #9900ff;
+    box-shadow: 0 0 1.5em #9900ff;
+  }
+  
+  .btn-rifles:hover {
+    transition: 0.8s ease-in-out;
+    background: #ff0000;
+    box-shadow: 0 0 1.5em #ff0000;
+  }
+  
+  .btn-pistolas:hover {
+    transition: 0.8s ease-in-out;
+    background: #00f7ff;
+    box-shadow: 0 0 1.5em #00f7ff;
+  }
+  
+  .btn-cuchillos:hover {
+    transition: 0.8s ease-in-out;
+    background: #003cff;
+    box-shadow: 0 0 1.5em #003cff;
+  }
+  
+  .btn-agentes:hover {
+    transition: 0.8s ease-in-out;
+    background: #ff0062;
+    box-shadow: 0 0 1.5em #ff0062;
+  }
+  
+  .btn-subfusiles:hover {
+    transition: 0.8s ease-in-out;
+    background: #ffa600;
+    box-shadow: 0 0 1.5em #ffa600;
+  }
+  
+  .btn-guantes:hover {
+    transition: 0.8s ease-in-out;
+    background: #524939;
+    box-shadow: 0 0 1.5em #524939;
+  }
+  
+  .btn-comprar:hover {
+    transition: 0.8s ease-in-out;
+    background: #296577;
+    box-shadow: 0 0 1.5em #296577;
+  }
+
+  .btn-cart-card:hover{
+    transition: 0.8s ease-in-out;
+    background: #db2323;
+    box-shadow: 0 0 0.5em #db2323;
+  }
+
+  .contendor-btn{
+    display: flex;
+    justify-content: center;
+  }
+
+
+  /* Footer */
+  .footer__whatsapp {
+    position: fixed;
+    width: 70px;
+    bottom: 30px;
+    right: 10px;
+  }
+  
+  footer {
+    background: rgb(4, 4, 4);
+    background: linear-gradient(80deg, rgb(4, 4, 4) 0%, rgb(16, 16, 18) 91%);
+  }
+  footer a {
+    margin: 3%;
+  }
+  
+  
+  /*# sourceMappingURL=style.css.map */
+  

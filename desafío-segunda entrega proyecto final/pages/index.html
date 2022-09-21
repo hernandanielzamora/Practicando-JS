@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Página web de ZETA STORE, una tienda online de skins de Counter Strike Global Offensive, con los mejores precios y las mejores ofertas, para que armes tu inventario soñado y a tu gusto. Sabemos el enorme valor que puede tener un buen inventario.">
+    <meta name="keywords"
+        content="CSGO, Counter Strike, Counter Strike Global Offensive, Skins, Steam, Inventario, AWP, AK-47, M4A4">
+    <meta property="og:title" content="ZETA STORE, las mejores skins al mejor precio." />
+    <meta property="og:description"
+        content="Página web de ZETA STORE, una tienda online de skins de Counter Strike Global Ofensive, con los mejores precios y las mejores ofertas, para que armes tu inventario soñado y a tu gusto. Sabemos el enorme valor que puede tener un buen inventario." />
+    <meta property="og:image" content="https://zetastore.netlify.app/media/wallpaperconocenos.jpg" />
+    <link rel="icon" href="../media/ico.ico">
+
+    <!-- Link AOS Animation -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
+    <!-- Link Boostrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
+
+    <!-- Link CSS -->
+    <link rel="stylesheet" href="../css/style.css">
+
+
+    <!-- Link Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch&display=swap" rel="stylesheet">
+
+    <title> ZETA STORE, las mejores skins al mejor precio. </title>
+</head>
+
+<body style="background-image: url(/image/wallpaper3.jpg); background-position:top center;" data-aos="fade-down">
+
+    <!-- Inicio Header / NavBar -->
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand" href="../index.html">ZETA STORE</a>
+                <button class="navbar-toggler bg-light" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item ">
+                            <a class="nav-link menu__link" href="../index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu__link" href="../pages/venta.html">Vendé tus skins</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu__link" href="../pages/faq.html">Preguntas Frecuentes</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link menu__link" href="../pages/conocenos.html">Conocenos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <!-- Fin Header -->
+
+    <main>
+        <!-- Menú de secciones + botones -->
+        <section>
+            <div>
+                <h2 class="main__minititle">Comprá las mejores skins al mejor precio</h2>
+            </div>
+            <div class="div-botones">
+                <a href="../index.html"><button type="button" class="btn btn-dark btn-rifles">INICIO</button></a>
+                <a href="pistolas.html"><button type="button" class="btn btn-dark btn-rifles">PISTOLAS</button></a>
+                <a href="cuchillos.html"><button type="button" class="btn btn-dark btn-rifles">CUCHILLOS</button></a>
+                <a href="subfusiles.html"><button type="button" class="btn btn-dark btn-rifles">SUB-FUSILES</button></a>
+                <a href="agentes.html"><button type="button" class="btn btn-dark btn-rifles">AGENTES</button></a>
+                <a href="guantes.html"><button type="button" class="btn btn-dark btn-rifles">GUANTES</button></a>
+            </div>
+        </section>
+
+
+        <!-- ARMAS -->
+        <h1 class="main__minititle">ARMAS</h1>
+        <section data-aos="fade-up" data-aos-duration="1000" class="container">
+            <div class="row" id="cont">
+            </div>
+        </section>
+
+        <!-- CARRITO OFFCANVAS -->
+        <button class="btn btn-cart-body" type="button" data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions" aria-controls="offcanvasWithBothOptions"><img src="https://img.icons8.com/nolan/64/counter-strike-global-offensive.png"/><p class="cart__title" id="cart-button">(0)</p></button>
+
+        <div class="offcanvas  offcanvas-start bg-dark cart-container" data-bs-scroll="true" tabindex="-1" id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel">
+            <div class="offcanvas-header" >
+                <h5 class="main__minititle" id="offcanvasWithBothOptionsLabel">Carrito</h5>
+                <p id="inner-cart-button">(0)</p>
+                <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+            </div>
+            <div class="offcanvas-body cart-container" id="cart-container">
+            </div>
+            <div class="prices__div">
+                <p class="cart__title" >IVA(21% del precio de/las arma/s): <span id="ivaPrice">0</span></p>
+                <p class="cart__title" >Precio Total: <span id="totalPrice">0</span></p>
+
+            </div>
+            <div>
+                <button type="button" class="btn btn-dark btn-cart text-center" id="clear-cart"><img src="https://img.icons8.com/glyph-neue/50/000000/trash.png"/></button>
+                <button type="button" class="btn btn-dark btn-cart text-center" id="clear-cart">Guardar Carrito</button>
+                <button type="button" class="btn btn-dark btn-cart text-center" id="clear-cart">Comprar</button>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-center text-white">
+        <!-- Grid container -->
+        <div class="container p-4 pb-0">
+            <!-- Section: Social media -->
+            <section class="mb-4">
+                <!-- Instagram -->
+                <a href="https://www.instagram.com/zetastorecs/" target="_blank">
+                    <ion-icon name="logo-instagram" size="large" style="color: #00f7ff;"></ion-icon></a>
+
+                <!-- Twitter -->
+                <a href="https://twitter.com/store_zeta" target="_blank">
+                    <ion-icon name="logo-twitter" size="large" style="color: #00f7ff;"></ion-icon></a>
+
+                <!-- Whatsappp -->
+                <a href="https://wa.me/5493886867663?text=Hola%20te%20hablo%20desde%20la%20pág%20del%20store"
+                    target="_blank">
+                    <ion-icon name="logo-whatsapp" size="large" style="color: #00f7ff;"></ion-icon></a>
+
+            </section>
+            <!-- Section: Social media -->
+        </div>
+        <!-- Grid container -->
+
+        <!-- Copyright -->
+        <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+            © 2022 Copyright:
+            <a class="text-white" href="#">ZetaStore.com</a>
+        </div>
+        <!-- Copyright -->
+    </footer>
+    <!-- Fin Footer -->
+
+
+    <!-- Link AOS -->
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!-- Link Boostrap -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-pprn3073KE6tl6bjs2QrFaJGz5/SUsLqktiwsUTF55Jfv3qYSDhgCecCxMW52nD2"
+        crossorigin="anonymous"></script>
+
+
+    <!-- Link Ionic -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+    <!-- Link JS -->
+    <script src="../javascript/stock.js"></script>
+    <script src="../javascript/cart.js"></script>
+    <script src="../javascript/index.js"></script>
+</body>
+
+</html>
