@@ -7,8 +7,8 @@ const totalPrice = document.getElementById("totalPrice");
 const ivaPrice = document.getElementById("ivaPrice");
 
 /* FUNCIONES MATEMÁTICAS */
-const suma = (a, b) => {
-    return a + b;
+const suma = (...totales) => {
+    return totales.reduce((acc, item) => acc + item, 0);
 };
 const iva = (precio) => {
     return precio * 1.21;
@@ -28,9 +28,10 @@ const addToCart = (productId) => {
     const exist = cart.some(product => product.id === productId)
     if (exist) {
         const item = cart.map(item => {
-            if (item.id === productId) {
+            item.id === productId ? item.quantity++ : item.quantity
+            /* if (item.id === productId) {
                 item.quantity++
-            }
+            } */
         })
     } else {
 
