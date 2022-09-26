@@ -1,9 +1,9 @@
 /* Creación de objetos en el DOM */
 let div = document.getElementById("cont");
 div.classlist = "container text-center";
-for(const product of arrayProducts){
+for (const product of arrayProducts) {
     let card = document.createElement("div")
-    card.classList ="card bg-dark"
+    card.classList = "card bg-dark"
     card.innerHTML = `<div class="col">
                             <a href="" target="_blank"><img src="../image/${product.img}" class="card-img-top"></a>
                             <div class="card-body">
@@ -16,13 +16,44 @@ for(const product of arrayProducts){
                                 <li class="list-group-item bg-dark"><button id="button${product.id}" type="button" class="btn btn-dark btn-comprar">Agregar al Carrito</li>
                             </ul>
                         </div>`
-   div.appendChild(card)
+    div.appendChild(card)
 
     let buttonCard = document.getElementById(`button${product.id}`);
     buttonCard.addEventListener("click", () => {
         addToCart(product.id);
     })
 }
+
+/* BUTTON DISCOUNT */
+let contador = 0
+
+let btnDiscount = document.createElement("button");
+btnDiscount.classList = "btn-index btn btn-dark";
+btnDiscount.innerHTML = "Click for a Discount";
+
+let containerDiscount = document.getElementById("sectionButton");
+
+containerDiscount.appendChild(btnDiscount)
+
+const addDiscount = (btn) => {
+    let divDiscount = document.createElement("div")
+    divDiscount.classList = "container-fluid"
+    containerDiscount.append(divDiscount)
+
+    let h3 = document.createElement("h3")
+    h3.innerHTML = `Código 1 : ${dsc1} //
+                    Código 2 : ${dsc2}`
+    h3.classList = "main__minititle"
+    divDiscount.appendChild(h3)
+
+    btn.disabled = true;
+    btn.disabled && (btn.innerHTML = "There you go!");
+}
+
+btnDiscount.addEventListener("click", () => {
+    contador++
+    contador === 3 ? addDiscount(btnDiscount) : btnDiscount.innerHTML = "Click Again!";
+})
 
 
 
@@ -43,5 +74,5 @@ const cartButton = document.getElementById("cart-button")
 /* INNER CART BUTTON */
 
 const innerCartBtn = document.getElementById("inner-cart-button")
-innerCartBtn.className =("main__minititle");
+innerCartBtn.className = ("main__minititle");
 
